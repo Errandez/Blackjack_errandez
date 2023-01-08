@@ -7,6 +7,8 @@ import java.util.ArrayList;
 import java.util.Scanner;
 import java.util.concurrent.Callable;
 
+//Permitirá escribir al cliente.
+
 public class HiloEscritura implements Callable<Boolean> {
 	   private Socket cliente;
 
@@ -20,15 +22,17 @@ public class HiloEscritura implements Callable<Boolean> {
 	    	  boolean off = false;
 	    	  while(!off) {
 		    	 String mensaje = r.nextLine();
-		         writer.writeBytes(mensaje +"\n");
+		         
 		         if(mensaje.contains("desconectar")) {
 		        	 off=true;
+		         }else {
+		        	 writer.writeBytes(mensaje +"\n");
 		         }
 	    	  }
-	    	  return true;
+	    	  return false;
 	      } catch (IOException e) {
 	         e.printStackTrace();
-	         return true;
+	         return false;
 	      }
 	   }
 	}

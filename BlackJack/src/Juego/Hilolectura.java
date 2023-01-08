@@ -7,6 +7,8 @@ import java.util.ArrayList;
 import java.util.Scanner;
 import java.util.concurrent.Callable;
 
+//Permitirá leer al cliente.
+
 public class Hilolectura implements Callable<Boolean>{
 	private Socket cliente;
 	

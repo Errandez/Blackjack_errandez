@@ -48,9 +48,11 @@ public class Jugador {
 	    return puntaje;
 	  }
 	  public String getNombre() {
+		  // Recupera el nombre del jugador.
 		  return this.nombre;
 	  }
 	  public void resetMano() {
+		  //Resetea las cartas del jugador.
 		  mano.clear();
 	  }
 	}
